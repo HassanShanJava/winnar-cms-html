@@ -100,6 +100,14 @@
             top: 19rem;
             left: 2rem;
             text-align: left;
+            z-index: 30;
+        }
+
+        .mission-right-lines {
+            position: absolute;
+            top: 23rem;
+            right: 2rem;
+            text-align: right;
         }
 
         .mission .box {
@@ -135,7 +143,7 @@
 
             font-size: 16px;
             font-style: normal;
-            font-weight: 800 !important;
+            font-weight: 500 !important;
             line-height: 130%;
             /* 23.4px */
         }
@@ -147,7 +155,7 @@
         }
 
         .space-make {
-            height: 60vh;
+            height: 80vh;
         }
 
         .button {
@@ -232,10 +240,126 @@
             max-width: 35rem;
         }
 
+        .down {
+            margin-bottom: 6rem;
+        }
+
+        .up {
+            margin-top: 6rem;
+
+        }
+
+        .content {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .content .content-overlay {
+            background: rgba(35, 210, 179, 0.7);
+            position: absolute;
+            height: 99%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0;
+            -webkit-transition: all 0.4s ease-in-out 0s;
+            -moz-transition: all 0.4s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
+        }
+
+        .content:hover .content-overlay {
+            opacity: 1;
+        }
+
+        .content-image {
+            width: 100%;
+        }
+
+        .content-details {
+            position: absolute;
+            text-align: center;
+            padding-left: 1em;
+            padding-right: 1em;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            -webkit-transition: all 0.3s ease-in-out 0s;
+            -moz-transition: all 0.3s ease-in-out 0s;
+            transition: all 0.3s ease-in-out 0s;
+        }
+
+        .content:hover .content-details {
+            top: 80%;
+            left: 50%;
+            opacity: 1;
+        }
+
+        .content:hover .founder-hover {
+            visibility:hidden ;
+        }
+
+        .content-details h2 {
+            color: #060a0d;
+            font-weight: 900;
+            /* letter-spacing: 0.15em;
+            margin-bottom: 0.2em; */
+            text-transform: uppercase;
+        }
+
+        .content-details h4 {
+            color: #060a0d;
+            font-weight: 700;
+
+        }
+
+        .content-details h5 {
+            font-family: Proxima Nova Regular;
+            color: #060a0d;
+
+        }
+
+        .fadeIn-bottom {
+            top: 80%;
+        }
+
+        .fadeIn-top {
+            top: 20%;
+        }
+
+        .fadeIn-left {
+            left: 20%;
+        }
+
+        .fadeIn-right {
+            left: 80%;
+        }
+
+        .text-hover {
+            padding: 0px 5px;
+            font-size: 12px;
+            font-family: Proxima Nova Regular !important;
+
+        }
+
+        .founder-hover {
+            color: #eaeaea;
+            position: absolute;
+            bottom: 0.5rem;
+        }
+
         /* mobile screen */
         @media screen and (max-width: 614px) {
             .about-image {
-                height: 20rem;
+                height: 26rem;
             }
 
             .mission {
@@ -251,6 +375,11 @@
                 max-width: 320px;
             }
 
+            #main-flex-back {
+                left: 2rem;
+                right: 2rem;
+            }
+
             .box-title {
                 font-size: 32px;
                 line-height: 100%;
@@ -264,14 +393,13 @@
 
             .para-text {
                 text-align: left;
+                font-size: 28px;
             }
 
             .para-box {
                 text-align: left;
                 font-size: 14px;
                 text-shadow: 2px 2px 7px #000000;
-                ;
-
             }
         }
     </style>
@@ -299,6 +427,29 @@
             </div>
             <div class="glow"></div>
         </div>
+
+
+        <div class="mission-right-lines">
+            <svg width="474" height="895" viewBox="0 0 674 1095" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.11379 547.5L486.887 1093.73H819.886L334.113 547.5H1.11379Z"
+                    stroke="url(#paint0_linear_190_685)" />
+                <path d="M1.11379 546.728L486.887 0.5H819.886L334.113 546.728H1.11379Z"
+                    stroke="url(#paint1_linear_190_685)" />
+                <defs>
+                    <linearGradient id="paint0_linear_190_685" x1="706" y1="1094.23" x2="220" y2="531.228"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-opacity="0" />
+                        <stop offset="1" stop-color="#454545" />
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_190_685" x1="706" y1="-1.26162e-05" x2="220" y2="563"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-opacity="0" />
+                        <stop offset="1" stop-color="#454545" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+        </div>
         <!-- <div class="container-fixed">
     
         </div> -->
@@ -314,7 +465,6 @@
             Meet Our Driving Force</p>
 
         <div style="display:flex; justify-content: space-between; align-items: start; color:#eaeaea; margin:0px 2rem;">
-
             <p style="font-family: Proxima Nova Regular; font-size: 30px;">The Passionate Team Behind Winnar</p>
             <div style="display: flex; gap:0.5rem; justify-content: space-between; align-items: center;">
                 <div class="slider_btn">
@@ -331,6 +481,97 @@
                             fill="#111111" class="slider_text" />
                     </svg>
 
+                </div>
+            </div>
+        </div>
+
+
+        <div
+            style="display: flex; overflow-x: hidden;  justify-content: space-between; align-items: center; margin: 0px 2rem 6rem 2rem;">
+
+            <div class="down">
+                <div class="content ">
+                    <div class="content-overlay" style="height: 100%;"></div>
+                    <img src="https://media.winnar.com/upload/founder.png" alt="/" />
+                    <div class="founder-hover" style="text-align:left;">
+                        <p style="padding:0px 5px; font-size: 2rem;">Scott L. Hughes</p>
+                        <p style="padding:0px 5px; font-size: 1.5rem;">Founder</p>
+                    </div>
+                    <div class="content-details fadeIn-bottom fadeIn-left" style=" text-align: left;">
+                        <h2 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Scott L. Hughes</h2>
+                        <h4 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Founder</h4>
+                        <h5 class="text-hover">Aenean vulputate
+                            eleifend tellus. Aenean leo ligula, porttitor eu,
+                            consequat vitae, eleifend ac,
+                            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                            nulla
+                            ut metus varius laoreet. Quisque rutrum.</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="up">
+                <div class="content">
+                    <div class="content-overlay" style="height: 100%;"></div>
+                    <img src="https://media.winnar.com/upload/founder-1.png" alt="/" class="" />
+                    <div class="founder-hover" style="text-align:left;">
+                        <p style="padding:0px 5px; font-size: 2rem;">Scott L. Hughes</p>
+                        <p style="padding:0px 5px; font-size: 1.5rem;">Founder</p>
+                    </div>
+                    <div class="content-details fadeIn-bottom fadeIn-left"
+                        style=" text-align: left; margin-bottom: 0rem;">
+                        <h2 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Scott L. Hughes</h2>
+                        <h4 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Founder</h4>
+                        <h5 class="text-hover">Aenean vulputate
+                            eleifend tellus. Aenean leo ligula, porttitor eu,
+                            consequat vitae, eleifend ac,
+                            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                            nulla
+                            ut metus varius laoreet. Quisque rutrum.</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="down">
+                <div class="content">
+                    <div class="content-overlay" style="height: 100%;"></div>
+                    <img src="https://media.winnar.com/upload/founder-2.png" alt="/" class="" />
+                    <div class="founder-hover" style="text-align:left;">
+                        <p style="padding:0px 5px; font-size: 2rem;">Scott L. Hughes</p>
+                        <p style="padding:0px 5px; font-size: 1.5rem;">Founder</p>
+                    </div>
+                    <div class="content-details fadeIn-bottom fadeIn-left" style=" text-align: left;">
+                        <h2 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Scott L. Hughes</h2>
+                        <h4 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Founder</h4>
+                        <h5 class="text-hover">Aenean vulputate
+                            eleifend tellus. Aenean leo ligula, porttitor eu,
+                            consequat vitae, eleifend ac,
+                            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                            nulla
+                            ut metus varius laoreet. Quisque rutrum.</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="up">
+
+                <div class="content">
+                    <div class="content-overlay" style="height: 100%;"></div>
+                    <img src="https://media.winnar.com/upload/founder-3.png" alt="/" class="" />
+                    <div class="founder-hover" style="text-align:left;">
+                        <p style="padding:0px 5px; font-size: 2rem;">Scott L. Hughes</p>
+                        <p style="padding:0px 5px; font-size: 1.5rem;">Founder</p>
+                    </div>
+                    <div class="content-details fadeIn-bottom fadeIn-left" style=" text-align: left;">
+                        <h2 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Scott L. Hughes</h2>
+                        <h4 style="font-family: Proxima Nova Extrabold; padding:0px 5px;">Founder</h4>
+                        <h5 class="text-hover">Aenean vulputate
+                            eleifend tellus. Aenean leo ligula, porttitor eu,
+                            consequat vitae, eleifend ac,
+                            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                            nulla
+                            ut metus varius laoreet. Quisque rutrum.</h5>
+                    </div>
                 </div>
             </div>
         </div>
@@ -385,16 +626,16 @@
                 WIN SUNDAY 8 PM
             </p>
 
-            <button class="button centered" style="top: 15rem">
-                <a href="/cars" style="
+            <a href="/cars" style="
               text-decoration: none;
               color: #060a0d;
               font-weight: 900;
               letter-spacing: -0.4px;
-            ">
+              " target="_blank">
+                <button class="button centered" style="top: 15rem; border-color: transparent; cursor: pointer;">
                     ENTER NOW
-                </a>
-            </button>
+                </button>
+            </a>
         </div>
     </div>
 
